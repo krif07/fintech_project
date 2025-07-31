@@ -42,3 +42,60 @@
 # fastapi==0.110.0
 # uvicorn[standard]==0.29.0
 # python-multipart==0.0.9
+
+✅ 1. Abre Visual Studio Code en tu carpeta del proyecto
+Por ejemplo:
+
+bash
+Copiar
+Editar
+cd C:\Users\AsusTUF\Documents\EducacionIT\Programación OO con IA\proyecto integrador\fintech_project
+code .
+
+✅ 2. Crea un entorno virtual
+Ejecutá este comando en la terminal integrada de VS Code:
+
+bash
+Copiar
+Editar
+python -m venv venv
+Esto creará una carpeta llamada venv/ con el entorno virtual.
+
+✅ 3. Activa el entorno virtual
+En Windows (cmd o PowerShell):
+bash
+Copiar
+Editar
+venv\Scripts\activate
+Una vez activado, deberías ver algo como esto en la terminal:
+
+bash
+Copiar
+Editar
+(venv) C:\Users\AsusTUF\Documents\...\
+✅ 4. Instala las dependencias necesarias
+Por ejemplo, para FastAPI y Uvicorn (servidor ASGI):
+
+bash
+Copiar
+Editar
+pip install fastapi uvicorn
+Podés ir agregando más librerías que necesites (como SQLAlchemy, Pydantic, etc.).
+
+✅ 5. Guarda las dependencias en requirements.txt (opcional, pero recomendado)
+bash
+Copiar
+Editar
+pip freeze > requirements.txt
+Esto te permite que cualquier otra persona (o vos en otra máquina) pueda instalar todo de golpe con:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+✅ 6. [VS Code] Seleccioná el intérprete de Python correcto
+Presioná Ctrl+Shift+P → "Python: Select Interpreter" → seleccioná el que diga algo como:
+
+Copiar
+Editar
+.\venv\Scripts\python.exe
