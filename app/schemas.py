@@ -12,17 +12,17 @@ class ClienteCreate(ClienteBase):
     password: str = Field(..., min_length=8, example="micontraseña123")
 
 class ClienteResponse(ClienteBase):
-    id_cliente: str = Field(..., example="cli_1")
+    id_cliente: int = Field(..., example=1)
     fecha_creacion: str = Field(..., example="2024-07-30T10:00:00Z")
 
 # --- Esquemas para Cuentas ---
 class CuentaCreate(BaseModel):
-    id_cliente: str = Field(..., example="cli_1")
+    id_cliente: int = Field(..., example=1)
     saldo_inicial: float = Field(0.0, ge=0, example=100.0)
 
 class CuentaResponse(BaseModel):
-    id_cuenta: str = Field(..., example="cta_1")
-    id_cliente: str = Field(..., example="cli_1")
+    id_cuenta: int = Field(..., example=1)
+    id_cliente: int = Field(..., example=1)
     saldo: float = Field(..., example=500.50)
     fecha_creacion: str
 
@@ -32,11 +32,11 @@ class Movimiento(BaseModel):
 
 class MovimientoResponse(BaseModel):
     mensaje: str
-    id_cuenta: str
+    id_cuenta: int
     saldo_actual: float
 
 class SaldoResponse(BaseModel):
-    id_cuenta: str
+    id_cuenta: int
     saldo: float
 
 # --- Esquemas para Blockchain (Opcional) ---
